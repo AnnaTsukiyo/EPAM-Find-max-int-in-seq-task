@@ -3,18 +3,21 @@ import java.util.Scanner;
 
 public class FindMaxInSeq {
     public static int max() {
-
-        // Put your code here
-
-        return 0;
+        int counter = 0, input = 0, large = Integer.MIN_VALUE;
+        Scanner in = new Scanner(System.in);
+        while ((input = in.nextInt()) != 0) {
+            large = Integer.max(large, input);
+            counter++;
+        }
+        if (counter == 0) {
+            System.out.println("No data was entered.");
+        }
+        return large;
     }
 
     public static void main(String[] args) {
 
         System.out.println("Test your code here!\n");
-
-        // Get a result of your code
-
         System.out.println(max());
     }
 }
